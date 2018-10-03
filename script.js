@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", init);
 function init(){
 
     document.querySelector("#createramdomstring").addEventListener("click", randomString);
-    document.querySelector("#submitform").addEventListener("click" , submitForm);
+    // document.querySelector("#submitform").addEventListener("click" , submitForm);
 
         $(function () {
             $("#selectcity").change(function () {
@@ -15,6 +15,43 @@ function init(){
                 }
             });
         });
+
+// *****************************************************************************************************
+        $(document).ready(function() {
+            if (!window.localStorage) {
+                alert('Your browser does not support HTML5 localStorage. Try upgrading.');
+            } else {
+                $("#applicationform").submit(function(){
+                                        setAllItems();
+                });						
+                    }
+        });
+
+
+
+        var setAllItems = function(){
+								
+            var newDate, itemId, formSave;
+                                    
+            newDate = new Date();
+            itemId = newDate.getTime();
+            formSave = {
+                          
+                            interviewpurpose: $("select[name='interviewpurpose']").val(),
+                            selectcity: $("select[name='selectcity']").val(),
+                            address: $("textarea[name='address']").val(),
+                            interviewername: $("input[name='interviewername']").val(),
+                            intervieweename: $("input[name='intervieweename']").val(),
+                            email: $("input[name='email']").val(),
+                            phonenumber: $("input[name='phonenumber']").val(),
+                            date: $("input[name='date']").val(),
+                            randomnumber: $("input[name='randomnumber']").val(),
+                          
+                        };
+                            
+                        // turn data into JSON string
+                        localStorage.setItem( itemId, JSON.stringify(formSave));
+        };
 
 
 
@@ -40,23 +77,3 @@ function init(){
 	document.querySelector("#randomnumber").value = "#" +randomstring;
     }
 
-
-    function submitForm(){
-            // event.preventDefault();
-            // var interviewername = document.querySelector("#interviewername").value;
-            // localStorage.setItem('interviewer' , interviewername);
-
-            var interviewer = document.querySelector("#interviewername").value;
-            var data = {interviewer};
-           
-            localStorage.setItem('Data', JSON.stringify(data));
-            clearData();
-
-
-
-
-             // var array = JSON.parse(localStorage.getItem('Data') || '[]');
-            // array.push(dataObject);
-            // localStorage.setItem('Data', JSON.stringify(array));
-           
-    }

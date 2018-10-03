@@ -11,23 +11,29 @@
 </head>
 <body>
 
+
+        <a href="displayform.html">Admin</a>
+        <a href="index.html">Register</a>
+        
+
     <h2>Interview Application Form</h2>
     <div class="container">
-    <form id="applicationform">
+    <form id="applicationform" name="applicationform">
         <label for="inetrviewPurpose">Interview Purpose</label>
-        <select id="interviewpurpose" required>
+        <select id="interviewpurpose" name="interviewpurpose" required>
             <option value="visa">Visa</option>
             <option value="permanentResidence">permanent Residence</option>
         </select>
         
         <label for="city">city</label>
-        <select id="selectcity" required>
+        <select id="selectcity" name="selectcity" required>
             <option value="london">London</option>
             <option value="brighton">Brighton</option>
             <option value="belfast">Belfast</option>
             <option value="cardif">Cardif</option>
             <option value="newcastle">New castle</option>
             <option value="elsewhere">ElseWhere</option>
+            
         </select>
         <!-- <hr> -->
         <div id="enternewcity" style="display: none">
@@ -36,30 +42,34 @@
         </div>
         
         <label for="address">Address</label>
-        <textarea placeholder="enter the address of the place where the interview is held" style="height:200px" required></textarea>
-        
-        <label for="interviewername">Interviewer</label>
-        <input type="text" placeholder="full name of the person that performs the interview" name="interviewer" id="interviewername" required/>
+        <textarea placeholder="enter the address of the place where the interview is held" style="height:200px" name="address" required></textarea>
+        <!-- <input type="text" placeholder="enter the address of the place where the interview is held" style="height:200px" name="address" required/> -->
 
-        <label for="Intervieweename">Interviewee</label>
-        <input type="text" placeholder="full name of the person to be interviewed" required/>
+        <label for="interviewername">Interviewer</label>
+        <input type="text" placeholder="full name of the person that performs the interview" name="interviewername" required/>
+
+        <label for="intervieweename">Interviewee</label>
+        <input type="text" placeholder="full name of the person to be interviewed" name ="intervieweename" required/>
 
         <label for="email">Email</label>
-        <input type="email" placeholder="enter email of the person to be interviewed" required/>
+        <input type="email" placeholder="enter email of the person to be interviewed" name="email" required/>
 
         <label for="phonenumber">Phone Number</label>
-        <input type="number" placeholder="enter phone number of the person to be interviewed" required />
+        <input type="number" placeholder="enter phone number of the person to be interviewed" name="phonenumber" required />
 
         <label for="date">Date</label>
-        <input type="date" placeholder="enter phone number of the person to be interviewed" required />
+        <input type="date" placeholder="enter phone number of the person to be interviewed" name="date" required />
 
         <!-- <button id="generateuniqueid">Generate Id</button>
         <input type="text" placeholder="click generate id button to auto generate unique id" id="uniqueid" > -->
 
         <input type="button" value="Create Random String" id="createramdomstring">
-        <input type="text" name="randomfield" id="randomnumber" required>
+        <input type="text" name="randomnumber" id="randomnumber" required>
 
         <button id="submitform">Submit Form</button>
+
+        
+        
 
     </form>
     </div>

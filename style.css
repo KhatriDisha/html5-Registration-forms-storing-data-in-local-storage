@@ -4,11 +4,74 @@ input[type=text],[type=email],[type=number],[type=date], select, textarea {
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
+     margin-top: 6px;/* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     display: block;
     
     
     
+}
+
+
+/*Admin Table styles*/
+
+
+
+
+#main {
+	height: 1020px;
+	padding-top: 20px;
+	background: #7d7e7d; /* old browsers */
+	background: -moz-linear-gradient(top, #444444 0%, #000000 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* ie */
+}
+
+table#theLog {
+	color:#2d2d2d;	
+	background-color:#e5e5e5;
+	display: table;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-color: gray;
+	font-size: 12px;
+	text-align: left;
+	margin: 20px auto;
+	max-width:1300px;
+}
+
+thead {
+display: table-header-group;
+vertical-align: middle;
+border-color: inherit;
+
+}
+
+th {
+    background: none repeat scroll 0 0 #0ff0ff;
+    border-bottom: 1px solid #0a868a;
+    border-top: 4px solid #0a868a;
+		border-right: 1px solid #0a868a;
+    color: #2a2a2a;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 8px;
+	height: 60px;
+	text-align:center;
+}
+
+tr:hover td {
+    background: none repeat scroll 0 0 #e1e6f8;
+    color: #1f1f1f;
+}
+
+td {
+    background: none repeat scroll 0 0 #E8EDFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid transparent;
+		border-right: 1px solid #ffffff;
+    color: #333333;
+		height:45px;
+    padding: 8px;
 }
